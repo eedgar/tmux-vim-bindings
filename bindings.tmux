@@ -27,7 +27,12 @@ main() {
     #tmux unbind-key -a
 
     # <Alt+a> as prefix
-    tmux set-option -g prefix M-a
+    #tmux set-option -g prefix M-a
+    
+    # Legacy
+    tmux unbind-key -b    # Free Ctrl-b
+    tmux set-option -g prefix C-a  # Ctrl-a
+    tmux bind-key a send-prefix
 
 ### Generic Hotkeys
 ###
